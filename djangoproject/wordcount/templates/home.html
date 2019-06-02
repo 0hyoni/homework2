@@ -1,0 +1,82 @@
+{% load staticfiles %}
+<head>
+        <link 
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Jua"> 
+<style>
+
+body {
+    font-family: 'Jua', serif;
+    font-size: 48px;
+    background-color: gray;
+    padding-top: 50px;
+    text-align: center;
+
+
+}
+
+img {
+
+    padding: 10px;
+    height: 150px;
+    
+}
+h1 {
+    color: black;
+    font-weight:bold;
+    
+}
+    
+
+div.a {
+    font-size: 25px;
+    color:white;
+    
+    
+}
+
+div.b {
+    font-size: 35px;
+    color:white;
+    
+}
+
+div.c {
+    font-size: 150%;
+    color:white;
+    
+}
+
+
+a{
+    margin: 20px 600px;
+    text-align: center;
+}
+img{
+    width:50%;
+    height:90%;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+<h1><em>안녕하세요!<br> 여기서 글자를 세어보세요~</em></h1>   
+
+<img src="{% static 'hyoni.jpg' %}">
+
+<div class="a">효니가 대신 세줍니다.</div>
+<div class="b">영현이가 대신 세줍니다.</div>
+<div class="c">찐잉시엔이 대신 세줍니다.</div>
+
+<a href="{%url 'about'%}">그게 뭔뎅?</a>
+
+<form action="{%url 'result'%}">
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br>
+    <input type="submit" value="count!">
+</form>
+</body>
